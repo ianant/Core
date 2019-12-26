@@ -1,5 +1,7 @@
 package com.prectice.array;
 
+import java.util.Arrays;
+
 public class ArrFindGivenSumByAddingTwoElements {
 
 	public static void main(String[] args) {
@@ -10,19 +12,21 @@ public class ArrFindGivenSumByAddingTwoElements {
 		System.out.println(result);
 	}
 	
+	
 	public static String findElements(int arr[],int len) {
-		int sum=16;
+		int sum=89;
 		int left=0;
 		int right=arr.length-1;
-		
+		Arrays.sort(arr);
 		while(right>left) {
 			if(arr[left]+arr[right]==sum) {
 				 return "elements are: "+arr[left]+":"+arr[right];
 			}
-			else if(arr[left]+arr[right]!=sum) {
+			else if(arr[left]+arr[right]<sum) {
 				left++;
-				right--;
 			}
+			else
+				right--;
 		}
 
 		return "Elements not found";
