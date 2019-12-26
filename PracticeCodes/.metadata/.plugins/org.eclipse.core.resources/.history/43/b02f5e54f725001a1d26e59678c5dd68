@@ -1,0 +1,22 @@
+package com.self.test.thread;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayListInsertAndRemove {
+
+	List <Integer> list=new ArrayList<Integer>();
+	
+	public void additionList() {
+		for(int i=0;i<5;i++) {
+			list.add(i);
+		}
+	}
+	
+	public void removeList() {
+		for(int i=0;i<5;i++) {
+			list.remove(i);
+		}
+	}
+	
+}

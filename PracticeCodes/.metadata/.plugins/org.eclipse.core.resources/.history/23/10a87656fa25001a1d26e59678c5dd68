@@ -1,0 +1,26 @@
+package com.self.test.thread;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ArrayListInsertAndRemove extends Thread {
+
+	List <Integer> list=new ArrayList<Integer>();
+	
+	public void additionList() throws InterruptedException {
+		for(int i=0;i<5;i++) {
+			list.add(i);
+			System.out.println("Added value: "+i);
+			sleep(1000);
+		}
+	}
+	
+	public void removeList() throws InterruptedException {
+		for(int i=0;i<5;i++) {
+			list.remove(i);
+			System.out.println("Removed Value: "+i);
+			sleep(1000);
+		}
+	}
+	
+}

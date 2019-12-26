@@ -1,0 +1,30 @@
+package com.self.test.thread;
+
+public class ThreadTest {
+
+	public static void main(String[] args) throws InterruptedException {
+		ArrayListInsertAndRemove obj=new ArrayListInsertAndRemove();
+		
+		Runnable a=new Runnable(){
+			public void run() {
+				obj.additionList();
+			}
+		};
+		
+		Runnable b=new Runnable() {
+			public void run() {
+				obj.removeList();
+			}
+		};
+
+		Thread thread1=new Thread(a);
+		Thread thread2=new Thread(b);
+		
+		thread1.start();
+		thread1.sleep(1000);
+		
+		thread2.start();
+		thread2.sleep(1000);
+	}
+
+}

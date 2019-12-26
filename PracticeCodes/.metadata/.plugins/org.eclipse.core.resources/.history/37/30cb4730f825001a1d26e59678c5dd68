@@ -1,0 +1,16 @@
+package com.self.test.thread;
+
+public class ThreadTest {
+
+	public static void main(String[] args) {
+		ArrayListInsertAndRemove obj=new ArrayListInsertAndRemove();
+		
+		Runnable a=new Runnable(){
+			public void run() {
+				obj.additionList();
+			}
+		};
+
+	}
+
+}

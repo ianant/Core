@@ -1,0 +1,11 @@
+package com.self.test.thread;
+
+public class ThreadTest {
+
+	public static void main(String[] args) {
+		ArrayListInsertAndRemove obj=new ArrayListInsertAndRemove();
+		
+
+	}
+
+}
